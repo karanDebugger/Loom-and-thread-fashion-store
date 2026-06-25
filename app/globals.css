@@ -1,0 +1,277 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #12131a;
+  --muted: #5d6576;
+  --primary: #5e3bee;
+  --primary-dark: #4324ba;
+  --ring: #d8dff8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(180deg, #f7f7fb 0%, #f2f4fb 100%);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  background: radial-gradient(circle at top right, #ffffff 0%, #ecebff 55%, #e5e8ff 100%);
+  border: 1px solid var(--ring);
+  border-radius: 24px;
+  padding: clamp(1.5rem, 3vw, 3rem);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: clamp(1.9rem, 4vw, 3.3rem);
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 660px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-btn {
+  border: 1px solid #cad0ea;
+  background: #fff;
+}
+
+.stats {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stats div {
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid #e8ebf8;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stats h2 {
+  margin: 0;
+}
+
+.stats p {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.collections,
+.catalog {
+  margin-top: 2.25rem;
+}
+
+.collections h2,
+.catalog h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.collection-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.collection-card {
+  border-radius: 18px;
+  padding: 1.4rem;
+  min-height: 170px;
+  color: #fff;
+}
+
+.collection-card h3 {
+  margin: 0;
+}
+
+.collection-card p {
+  margin: 0.75rem 0 0;
+  max-width: 320px;
+}
+
+.collection-card.men {
+  background: linear-gradient(140deg, #272a35, #464b65);
+}
+
+.collection-card.women {
+  background: linear-gradient(140deg, #7126d2, #a453ef);
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.catalog-header a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.products-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #e6e9f7;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-content {
+  padding: 1rem;
+}
+
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: #ece9ff;
+  color: #4f2ad8;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-weight: 600;
+}
+
+.rating {
+  color: #f59a00;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.product-content h3 {
+  margin: 0.75rem 0 0.4rem;
+}
+
+.product-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  min-height: 42px;
+}
+
+.product-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-footer strong {
+  font-size: 1.15rem;
+}
+
+.product-footer button {
+  border: none;
+  background: #171a28;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.product-footer button:hover {
+  background: #0d0f1b;
+}
+
+@media (max-width: 980px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  main {
+    padding-top: 1.25rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 260px;
+  }
+}
